@@ -634,6 +634,7 @@
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#WardA -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#WardA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MaleWard"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ward"/>
         <hasBed rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Bed1"/>
         <hasBed rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Bed2"/>
@@ -645,6 +646,8 @@
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#WardB -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#WardB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#FemaleWard"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MaleWard"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ward"/>
         <hasBed rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Bed4"/>
         <hasBed rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Bed5"/>
