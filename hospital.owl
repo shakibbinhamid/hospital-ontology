@@ -369,6 +369,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#CardiologyDepartment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#CardiologyDepartment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Department"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#EmergencyCareDepartment -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#EmergencyCareDepartment">
