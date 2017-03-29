@@ -14,6 +14,25 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#worksIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#worksIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -131,6 +150,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#In-Patient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#In-Patient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Patient"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Out-Patient"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#MaleWard -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#MaleWard">
@@ -171,6 +199,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Operation">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#Out-Patient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Out-Patient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Patient"/>
     </owl:Class>
     
 
@@ -396,7 +432,7 @@
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Donald -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Donald">
-        <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Patient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Out-Patient"/>
     </owl:NamedIndividual>
     
 
@@ -420,7 +456,7 @@
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Smith -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Smith">
-        <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Patient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#In-Patient"/>
     </owl:NamedIndividual>
     
 
