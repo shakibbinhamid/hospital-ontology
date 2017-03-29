@@ -111,6 +111,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#FemaleWard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#FemaleWard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ward"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#Hospital -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Hospital"/>
@@ -120,6 +128,14 @@
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#HospitalComponent -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#HospitalComponent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#MaleWard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#MaleWard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ward"/>
+    </owl:Class>
     
 
 
