@@ -1,0 +1,7 @@
+PREFIX hospital: <http://www.semanticweb.org/shakib/ontologies/hospital#>
+
+SELECT DISTINCT ?dept
+WHERE {
+	?staff hospital:basedIn hospital:QueenAlexandraBuilding;
+		hospital:worksIn ?dept
+}
