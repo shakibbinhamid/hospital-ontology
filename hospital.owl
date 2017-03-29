@@ -43,6 +43,38 @@
     
 
 
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#controlsUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#controlsUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Department"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#hasBed -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#hasBed">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ward"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Bed"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#usesWard -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#usesWard">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Unit"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ward"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#worksIn -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#worksIn">
@@ -392,6 +424,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#BurnsUnit">
         <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Unit"/>
+        <usesWard rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#WardC"/>
     </owl:NamedIndividual>
     
 
@@ -440,6 +473,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#EmergencyCareDepartment">
         <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Department"/>
+        <controlsUnit rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#BurnsUnit"/>
     </owl:NamedIndividual>
     
 
@@ -507,6 +541,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#NeonatalUnit">
         <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Unit"/>
+        <usesWard rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#WardA"/>
     </owl:NamedIndividual>
     
 
@@ -547,6 +582,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#PediatricDepartment">
         <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Department"/>
+        <controlsUnit rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#NeonatalUnit"/>
     </owl:NamedIndividual>
     
 
@@ -575,6 +611,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#WardA">
         <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ward"/>
+        <hasBed rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Bed1"/>
+        <hasBed rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Bed2"/>
+        <hasBed rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Bed3"/>
     </owl:NamedIndividual>
     
 
@@ -583,6 +622,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#WardB">
         <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ward"/>
+        <hasBed rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Bed4"/>
+        <hasBed rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Bed5"/>
     </owl:NamedIndividual>
     
 
