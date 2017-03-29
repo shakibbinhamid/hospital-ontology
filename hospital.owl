@@ -227,22 +227,26 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#CardiologyPatient">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#hasProcedure"/>
-                <owl:someValuesFrom>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Patient"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#carriedOutBy"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#hasProcedure"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#worksIn"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#CardiologyDepartment"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#carriedOutBy"/>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#worksIn"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#CardiologyDepartment"/>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
                             </owl:Restriction>
                         </owl:someValuesFrom>
                     </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Patient"/>
     </owl:Class>
     
 
@@ -391,23 +395,27 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#PatientOperatedByJones">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#hasOperation"/>
-                <owl:someValuesFrom>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Patient"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#carriedOutBy"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#hasOperation"/>
                         <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:oneOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Jones"/>
-                                </owl:oneOf>
-                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#carriedOutBy"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:oneOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Jones"/>
+                                        </owl:oneOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
                         </owl:someValuesFrom>
                     </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Patient"/>
     </owl:Class>
     
 
@@ -438,12 +446,16 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#ProcedureRequiringAnaesthetist">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#requiresPhysician"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Anaesthetist"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#requiresPhysician"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Anaesthetist"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure"/>
     </owl:Class>
     
 
