@@ -77,6 +77,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#hasOperation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#hasOperation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#hasProcedure"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#operatedOn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Patient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Operation"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#hasProcedure -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#hasProcedure">
@@ -84,6 +96,27 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Patient"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#operatedOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#operatedOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#carriedOutOn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Operation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Patient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#requiresPhysician -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#requiresPhysician">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Physician"/>
     </owl:ObjectProperty>
     
 
@@ -350,6 +383,31 @@
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Patient">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#People"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#PatientOperatedByJones -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#PatientOperatedByJones">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#hasOperation"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#carriedOutBy"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Jones"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Patient"/>
     </owl:Class>
     
 
