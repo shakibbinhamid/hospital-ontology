@@ -7,5 +7,5 @@ PREFIX hospital: <http://www.semanticweb.org/shakib/ontologies/hospital#>
 SELECT ?staff
 WHERE {
 	?op hospital:carriedOutOn ?patient ;
-	       hospital:carriedOutBy ?staff . 
+	    hospital:carriedOutBy ?staff . 
 }

@@ -1,0 +1,6 @@
+PREFIX hospital: <http://www.semanticweb.org/shakib/ontologies/hospital#>
+
+SELECT ?name
+WHERE {
+	?name hospital:worksIn hospital:CardiologyDepartment
+}
