@@ -36,6 +36,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#carriedOutOn">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Patient"/>
     </owl:ObjectProperty>
@@ -554,6 +555,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Smith_Operation">
         <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Operation"/>
+        <carriedOutBy rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._James"/>
+        <carriedOutBy rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ms._Kathy"/>
+        <carriedOutOn rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Smith"/>
         <performedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-23T00:00:00Z</performedOn>
     </owl:NamedIndividual>
     
@@ -635,6 +639,46 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalSpeciality"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#People"/>
         </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Bed1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Bed2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Bed3"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Bed4"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Bed5"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Bed6"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Bed7"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Bed8"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Betty_Consultation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#BurnsUnit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#CR1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#CR2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#CR3"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#CR4"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#CardiologyDepartment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#EmergencyCareDepartment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Carmen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Donald"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._James"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Jones"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Smith"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Ms._Kathy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Ms._Sally"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#NeonatalUnit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#OT1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#OT2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#OT3"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#OT4"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#PediatricDepartment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Smith_Operation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#SouthamptonGeneral"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#WardA"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#WardB"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#WardC"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#WardD"/>
+        </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>
 
