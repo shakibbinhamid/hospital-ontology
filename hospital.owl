@@ -245,6 +245,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#MixedGenderWard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#MixedGenderWard">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#FemaleWard"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#MaleWard"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ward"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#Nurse -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Nurse">
