@@ -1,0 +1,8 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX hospital: <http://www.semanticweb.org/shakib/ontologies/hospital#>
+
+SELECT ?op
+WHERE {
+	?op hospital:carriedOutBy 	hospital:Mr._Jones ;
+		hospital:performedOn 	"2016-05-23T00:00:00Z"^^xsd:dateTime .
+}
