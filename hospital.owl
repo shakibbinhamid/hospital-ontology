@@ -22,10 +22,32 @@
     
 
 
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#carriedOutBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#carriedOutBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Staff"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#carriedOutOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#carriedOutOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Patient"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#worksIn -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#worksIn">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Staff"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Department"/>
     </owl:ObjectProperty>
     
 
@@ -425,6 +447,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Carmen">
         <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Nurse"/>
+        <worksIn rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#CardiologyDepartment"/>
     </owl:NamedIndividual>
     
 
@@ -449,6 +472,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Jones">
         <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Anaesthetist"/>
+        <worksIn rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#CardiologyDepartment"/>
     </owl:NamedIndividual>
     
 
@@ -473,6 +497,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Ms._Sally">
         <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Administrator"/>
+        <worksIn rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#CardiologyDepartment"/>
     </owl:NamedIndividual>
     
 
