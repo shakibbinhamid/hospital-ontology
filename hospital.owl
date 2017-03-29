@@ -434,6 +434,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#ProcedureRequiringAnaesthetist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#ProcedureRequiringAnaesthetist">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#requiresPhysician"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Anaesthetist"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#Radiologist -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Radiologist">
@@ -763,6 +777,7 @@
         <carriedOutBy rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Jones"/>
         <carriedOutBy rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ms._Kathy"/>
         <carriedOutOn rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Smith"/>
+        <requiresPhysician rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ms._Kathy"/>
         <performedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-23T00:00:00Z</performedOn>
     </owl:NamedIndividual>
     
