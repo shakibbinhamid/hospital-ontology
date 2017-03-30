@@ -506,13 +506,7 @@
                         <owl:someValuesFrom>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#carriedOutBy"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:oneOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Jones"/>
-                                        </owl:oneOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Jones"/>
                             </owl:Restriction>
                         </owl:someValuesFrom>
                     </owl:Restriction>
@@ -822,7 +816,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._James">
         <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Radiologist"/>
-        <worksIn rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#PediatricDepartment"/>
+        <worksIn rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#CardiologyDepartment"/>
     </owl:NamedIndividual>
     
 
@@ -832,7 +826,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Jones">
         <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Anaesthetist"/>
         <basedIn rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#QueenAlexandraBuilding"/>
-        <worksIn rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#CardiologyDepartment"/>
+        <worksIn rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#PediatricDepartment"/>
     </owl:NamedIndividual>
     
 
