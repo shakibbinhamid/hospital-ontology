@@ -29,7 +29,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Staff"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Building"/>
-        <rdfs:comment>&lt;staff&gt; basedIn &lt;building&gt;. A member of staff can only be based in ONE building (functional property).</rdfs:comment>
+        <rdfs:comment xml:lang="en">&lt;staff&gt; basedIn &lt;building&gt;. A member of staff can only be based in ONE building (functional property).</rdfs:comment>
+        <rdfs:label xml:lang="en">Based in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -42,7 +43,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Bed"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ward"/>
-        <rdfs:comment>&lt;bed&gt; bedIn &lt;ward&gt;. A bed can only be in ONE ward (functional property).</rdfs:comment>
+        <rdfs:comment xml:lang="en">&lt;bed&gt; bedIn &lt;ward&gt;. A bed can only be in ONE ward (functional property). Inverse of hasBed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bed in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -53,6 +55,8 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Staff"/>
+        <rdfs:comment xml:lang="en">&lt;medical procedure&gt; carriedOutBy &lt;staff&gt;. e.g. Consultation_a carriedOutBy Mr._Jones, where Consultation_a is a MedicalProcedure and Mr._Jones is a Staff. A Staff can carry out multiple medical procedures, and a medical procedure can be carried out by multiple staff.</rdfs:comment>
+        <rdfs:label xml:lang="en">Carried out by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -76,6 +80,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Department"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Unit"/>
+        <rdfs:comment xml:lang="en">&lt;department&gt; controlsUnit &lt;unit&gt;. A unit can be controlled by only ONE department, but a department may have multiple units under its control (inverse functional property).</rdfs:comment>
+        <rdfs:label xml:lang="en">Controls Unit</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -87,6 +93,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ward"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Bed"/>
+        <rdfs:comment xml:lang="en">&lt;ward&gt; hasBed &lt;bed&gt;. A ward can have any number of beds, but a bed can only be in one ward (inverse functional property). Inverse of bedIn.</rdfs:comment>
+        <rdfs:label xml:lang="en">Has Bed</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -122,6 +130,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Bed"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#In-Patient"/>
+        <rdfs:comment xml:lang="en">&lt;bed&gt; occupiedBy &lt;in patient&gt;. Only In-Patients can occupy beds and only one bed. Similarly a bed can only be occupied by one In-Patient (inverse functional and functional).</rdfs:comment>
+        <rdfs:label xml:lang="en">Occupied By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -143,6 +153,8 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Physician"/>
+        <rdfs:comment xml:lang="en">&lt;medical procedure&gt; requiresPhysician &lt;physician&gt;. A MedicalProcedure can require any number of Physicians and a Physician may be required by any number of MedicalProcedures.</rdfs:comment>
+        <rdfs:label xml:lang="en">Requires Physican</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -153,6 +165,8 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Unit"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ward"/>
+        <rdfs:comment xml:lang="en">&lt;unit&gt; usesWard &lt;ward&gt;. A Unit may use any number of wards, and a ward may be used by any number of units.</rdfs:comment>
+        <rdfs:label xml:lang="en">Uses Ward</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -161,8 +175,11 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#worksIn">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Staff"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Department"/>
+        <rdfs:comment xml:lang="en">&lt;staff&gt; worksIn &lt;department&gt;. A staff can only work in ONE department (functional property). A department can have any number of employees.</rdfs:comment>
+        <rdfs:label xml:lang="en">Works in</rdfs:label>
     </owl:ObjectProperty>
     
 
