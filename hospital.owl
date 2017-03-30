@@ -381,6 +381,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/shakib/ontologies/hospital#Office -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Office">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Room"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#OperatingTheatre -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#OperatingTheatre">
@@ -923,6 +931,14 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#CardiologyDepartment"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#EmergencyCareDepartment"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#PediatricDepartment"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#ConsultingRoom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Office"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#OperatingTheatre"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
