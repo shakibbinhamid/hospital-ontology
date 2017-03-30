@@ -1,0 +1,31 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX hospital: <http://www.semanticweb.org/shakib/ontologies/hospital#>
+
+SELECT ?name
+WHERE {
+	?name hospital:worksIn hospital:CardiologyDepartment
+}
+
+SELECT (COUNT(?bed) AS ?numberOfBedsInNeonatal)
+WHERE {
+	?ward 					hospital:hasBed 	?bed.
+	hospital:NeonatalUnit 	hospital:usesWard 	?ward
+}
+
+SELECT ?staff
+WHERE {
+	?op hospital:operatedOn ?patient ;
+	    hospital:carriedOutBy ?staff . 
+}
+
+SELECT DISTINCT ?dept
+WHERE {
+	?staff 	hospital:basedIn hospital:QueenAlexandraBuilding;
+			hospital:worksIn ?dept
+}
+
+SELECT DISTINCT ?op
+WHERE {
+	?op hospital:carriedOutBy 	hospital:Mr._Jones ;
+		hospital:performedOn 	"2016-05-23T00:00:00Z"^^xsd:dateTime .
+}

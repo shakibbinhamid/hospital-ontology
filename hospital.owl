@@ -822,6 +822,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._James">
         <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Radiologist"/>
+        <worksIn rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#PediatricDepartment"/>
     </owl:NamedIndividual>
     
 
@@ -937,7 +938,7 @@
         <carriedOutBy rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._James"/>
         <carriedOutBy rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Jones"/>
         <carriedOutBy rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ms._Kathy"/>
-        <carriedOutOn rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Smith"/>
+        <operatedOn rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Mr._Smith"/>
         <requiresPhysician rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ms._Kathy"/>
         <performedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-23T00:00:00Z</performedOn>
     </owl:NamedIndividual>
