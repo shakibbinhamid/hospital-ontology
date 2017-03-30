@@ -246,6 +246,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Bed">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#HospitalComponent"/>
+        <rdfs:comment xml:lang="en">Beds are placed in wards in a part-whole relationship, hasBed or bedIn</rdfs:comment>
+        <rdfs:label xml:lang="en">Bed</rdfs:label>
     </owl:Class>
     
 
@@ -254,6 +256,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Building">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#HospitalComponent"/>
+        <rdfs:comment xml:lang="en">Buildings have staff working in them by the relation basedIn. A building is not assigned to any particular ward, room, department or unit.</rdfs:comment>
+        <rdfs:label xml:lang="en">Building</rdfs:label>
     </owl:Class>
     
 
@@ -316,6 +320,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Department">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#HospitalComponent"/>
+        <rdfs:comment xml:lang="en">A department can be thought of an administrative faction of a hospital. Staffs work in departments by the worksIn relation. Departments are in charge of specialist units by the controlsUnit relation. They do not control wards directly since that is a function performed by functional factions like units.</rdfs:comment>
+        <rdfs:label xml:lang="en">Department</rdfs:label>
     </owl:Class>
     
 
@@ -344,7 +350,10 @@
 
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#HospitalComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#HospitalComponent"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#HospitalComponent">
+        <rdfs:comment xml:lang="en">A hospital component is everything that is in a hospital&apos;s structural and adminstrative entity. So, it includes wards, beds, departments, etc. but does not have people, medical procedures, specialities etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hospital Component</rdfs:label>
+    </owl:Class>
     
 
 
@@ -915,6 +924,29 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#WardD">
         <rdf:type rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ward"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#CardiologyDepartment">
+        <rdfs:label xml:lang="en">Cardiology Department</rdfs:label>
+        <rdfs:comment xml:lang="en">A department for staff that work in cardiology.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#EmergencyCareDepartment">
+        <rdfs:comment xml:lang="en">A department for staff working in emergency care like the burns unit.</rdfs:comment>
+        <rdfs:label xml:lang="en">Emergency Care Department</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#PediatricDepartment">
+        <rdfs:label xml:lang="en">Pediatric Department</rdfs:label>
+        <rdfs:comment xml:lang="en">A department for staff specialising in child diseases like neonatal unit.</rdfs:comment>
+    </rdf:Description>
     
 
 
