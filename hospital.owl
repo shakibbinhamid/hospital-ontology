@@ -7,7 +7,11 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:hospital="http://www.semanticweb.org/shakib/ontologies/hospital#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital">
+        <owl:versionInfo>0.0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en">A simple ontology for hospitals. Made by Shakib-Bin Hamid, ID: 25250094, EMAIL: sh3g12@soton.ac.uk</rdfs:comment>
+        <rdfs:label xml:lang="en">Hospital Ontology</rdfs:label>
+    </owl:Ontology>
     
 
 
@@ -199,8 +203,10 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#performedOn">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>&lt;medical procedure&gt; performedOn &lt;datetime&gt;. Medical procedures are performed on exactly one day (functional property).</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -220,6 +226,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Administrator">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Staff"/>
+        <rdfs:comment xml:lang="en">Administrators are staff.</rdfs:comment>
+        <rdfs:label xml:lang="en">Administrator</rdfs:label>
     </owl:Class>
     
 
@@ -229,6 +237,8 @@
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Anaesthetist">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Physician"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Radiologist"/>
+        <rdfs:comment xml:lang="en">Anaesthetists specialise in Anaesthesia.</rdfs:comment>
+        <rdfs:label xml:lang="en">Anaesthetist</rdfs:label>
     </owl:Class>
     
 
@@ -238,6 +248,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Anesthesia">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalSpeciality"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Radiology"/>
+        <rdfs:label xml:lang="en">Anaesthesia</rdfs:label>
     </owl:Class>
     
 
@@ -294,6 +305,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Patient treated by a staff who works in the cardiology department.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cardiology Patient</rdfs:label>
     </owl:Class>
     
 
@@ -303,6 +316,8 @@
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Consultation">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Operation"/>
+        <rdfs:comment xml:lang="en">A consultation is a medical procedure carried out by a staff on a patient.</rdfs:comment>
+        <rdfs:label xml:lang="en">Consultation</rdfs:label>
     </owl:Class>
     
 
@@ -312,6 +327,8 @@
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#ConsultingRoom">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Room"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#OperatingTheatre"/>
+        <rdfs:comment xml:lang="en">A Consulting room is used for a Consultation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Consulting Room</rdfs:label>
     </owl:Class>
     
 
@@ -338,6 +355,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#FemaleWard">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ward"/>
+        <rdfs:comment xml:lang="en">A ward for Female patients.</rdfs:comment>
+        <rdfs:label xml:lang="en">Female Ward</rdfs:label>
     </owl:Class>
     
 
@@ -362,6 +381,8 @@
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#In-Patient">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Patient"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Out-Patient"/>
+        <rdfs:comment xml:lang="en">Patients that are admitted to the hospital and occupies a bed.</rdfs:comment>
+        <rdfs:label xml:lang="en">In-Patient</rdfs:label>
     </owl:Class>
     
 
@@ -370,19 +391,27 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#MaleWard">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ward"/>
+        <rdfs:comment xml:lang="en">A ward for male patients.</rdfs:comment>
+        <rdfs:label xml:lang="en">Male Ward</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure">
+        <rdfs:comment xml:lang="en">A medical procedure is carried out by a Staff and carried out on a Patient on a Datetime.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medical Procedure</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#MedicalSpeciality -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalSpeciality"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalSpeciality">
+        <rdfs:comment xml:lang="en">A Physician can specialise in medical specialities.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medical Speciality</rdfs:label>
+    </owl:Class>
     
 
 
@@ -398,6 +427,8 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Ward"/>
+        <rdfs:comment xml:lang="en">A ward for both male and female patients.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mixed Gender Ward</rdfs:label>
     </owl:Class>
     
 
@@ -406,6 +437,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Nurse">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Staff"/>
+        <rdfs:comment xml:lang="en">Nurses are staff.</rdfs:comment>
+        <rdfs:label xml:lang="en">Nurse</rdfs:label>
     </owl:Class>
     
 
@@ -414,6 +447,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Office">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Room"/>
+        <rdfs:comment xml:lang="en">An office is used for administrative purposes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Office</rdfs:label>
     </owl:Class>
     
 
@@ -422,6 +457,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#OperatingTheatre">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Room"/>
+        <rdfs:comment xml:lang="en">A Operating Theatre is used for Operation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Operating Theatre</rdfs:label>
     </owl:Class>
     
 
@@ -430,6 +467,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Operation">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalProcedure"/>
+        <rdfs:comment xml:lang="en">An operation is a medical procedure carried out by a staff on a patient.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Operation</rdfs:comment>
     </owl:Class>
     
 
@@ -438,6 +477,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Out-Patient">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Patient"/>
+        <rdfs:comment xml:lang="en">Patients that do not occupy a bed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Out-Patient</rdfs:label>
     </owl:Class>
     
 
@@ -447,6 +488,8 @@
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Patient">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#People"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Staff"/>
+        <rdfs:comment xml:lang="en">A patient is a person. They can also be staff.</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient</rdfs:label>
     </owl:Class>
     
 
@@ -476,6 +519,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Patients that had an operation where Mr. Jones participated.</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient Operated by Jones</rdfs:label>
     </owl:Class>
     
 
@@ -490,7 +535,10 @@
 
     <!-- http://www.semanticweb.org/shakib/ontologies/hospital#People -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#People"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#People">
+        <rdfs:comment xml:lang="en">Personnel related to the Hospital context.</rdfs:comment>
+        <rdfs:label xml:lang="en">People</rdfs:label>
+    </owl:Class>
     
 
 
@@ -498,6 +546,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Physician">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Staff"/>
+        <rdfs:comment xml:lang="en">Physicians are staff.</rdfs:comment>
+        <rdfs:label xml:lang="en">Physician</rdfs:label>
     </owl:Class>
     
 
@@ -516,6 +566,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Medical Procedures that require an anaesthetist by the requiresPhysician relation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Procedure Requiring Anaesthetist</rdfs:label>
     </owl:Class>
     
 
@@ -524,6 +576,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Radiologist">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#Physician"/>
+        <rdfs:comment xml:lang="en">Radiologists are Physicans specialising in Radiology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Radiologist</rdfs:label>
     </owl:Class>
     
 
@@ -532,6 +586,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Radiology">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#MedicalSpeciality"/>
+        <rdfs:label xml:lang="en">Radiology</rdfs:label>
     </owl:Class>
     
 
@@ -540,6 +595,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Room">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#HospitalComponent"/>
+        <rdfs:comment xml:lang="en">A Room is a Hospital Component. It abstracts any room used in a hospital including offices, OTs etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Room</rdfs:label>
     </owl:Class>
     
 
@@ -548,6 +605,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Staff">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#People"/>
+        <rdfs:comment xml:lang="en">Staff work in a department.</rdfs:comment>
+        <rdfs:label xml:lang="en">Staff</rdfs:label>
     </owl:Class>
     
 
@@ -556,6 +615,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Unit">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#HospitalComponent"/>
+        <rdfs:comment xml:lang="en">A Unit a functional faction of a hospital. A Unit is controlled by a department.</rdfs:comment>
+        <rdfs:label xml:lang="en">Unit</rdfs:label>
     </owl:Class>
     
 
@@ -564,6 +625,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shakib/ontologies/hospital#Ward">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shakib/ontologies/hospital#HospitalComponent"/>
+        <rdfs:comment xml:lang="en">A Ward is used by units. It has beds by the part-whole relation hasBed or bedIn.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ward</rdfs:label>
     </owl:Class>
     
 
@@ -587,6 +650,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A ward for patients treated by staff working in the Cardiology Department.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ward of Cardiology Patient</rdfs:label>
     </owl:Class>
     
 
